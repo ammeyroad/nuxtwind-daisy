@@ -20,7 +20,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="mb-10 grid">
+  <div class="mb-2 grid">
     <div :class="grid" class="btn btn-sm btn-outline w-max btn-primary bg-primary/10 rounded-full">
       <Icon name="solar:round-alt-arrow-right-bold" class="w-3 h-3" />
       <span class="text-sm">{{ tag }}</span>

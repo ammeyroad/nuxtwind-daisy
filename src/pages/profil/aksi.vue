@@ -3,29 +3,17 @@
 const item = {
   halaman: 'Profil Perusahaan',
   to: '/profil',
-  title: 'Tata Kelola Clipan Finance',
+  title: 'Aksi berkelanjutan kami',
   description: 'Ingin mengetahui tentang Clipan? Ini adalah halaman yang menampilkan informasi tentang Clipan. lengap dari sejarah dan pengembangan Clipan.',
   gambar: 'https://clipan-v3.netlify.app/slider-1.png',
   konten: [
     {
-      tag: 'Pedoman Perusahaan',
+      tag: 'Gabung Bersama',
       tagto: '#tahunan',
-      title: 'Pedoman Perusahaan Clipan',
+      title: 'berkembang karir Perusahaan Clipan',
       subtitle: 'Laporan tahunan yang menampilkan hasil dari perusahaan Clipan',
       gambar: '/about',
       isi: [
-        {
-          judul: 'judul tahun keduia',
-          to: 'https://clipan-v3.netlify.app/slider-1.png',
-        },
-        {
-          judul: 'judul tahun keduia',
-          to: 'https://clipan-v3.netlify.app/slider-1.png',
-        },
-        {
-          judul: 'judul tahun keduia',
-          to: 'https://clipan-v3.netlify.app/slider-1.png',
-        },
         {
           judul: 'judul tahun keduia',
           to: 'https://clipan-v3.netlify.app/slider-1.png',
@@ -63,14 +51,6 @@ const item = {
       isi: [
         {
           judul: 'Anggaran Dasar',
-          to: 'https://clipan-v3.netlify.app/slider-1.png',
-        },
-        {
-          judul: 'judul tahun keduia',
-          to: 'https://clipan-v3.netlify.app/slider-1.png',
-        },
-        {
-          judul: 'judul tahun keduia',
           to: 'https://clipan-v3.netlify.app/slider-1.png',
         },
         {

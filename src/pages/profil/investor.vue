@@ -156,15 +156,15 @@ const item = {
       subtitle: 'Informasi RUPS tahunan yang perusahaan Clipan',
       isi: [
         {
-          judul: 'judul tahun keduia',
-          tahun: '2023',
-          icon: 'solar:airbuds-case-bold-duotone',
+          judul: 'Prospektus Obligasi Clipan',
+          tahun: '2021',
+          icon: 'fluent-color:document-folder-24',
           to: 'https://clipan-v3.netlify.app/slider-1.png',
         },
         {
-          judul: 'Prospektus tahun keduia',
-          tahun: '2013',
-          icon: 'solar:airbuds-case-bold-duotone',
+          judul: 'Medium termnote clipan finance',
+          tahun: '2018',
+          icon: 'fluent-color:document-edit-24',
           to: 'https://clipan-v3.netlify.app/slider-1.png',
         },
       ],
@@ -270,36 +270,42 @@ const groupedRUPS = computed(() => {
       </div>
     </section>
 
-    <section id="#keuangan" class="grid grid-cols-1 gap-2 mt-2">
+    <section :id="item.konten[1].tag" class="grid grid-cols-1 gap-2 mt-2">
       <div class=" bg-white text-center pt-24 pb-0 p-6 rounded-lg  ">
-        <UiTitleSatu :tag="item.konten[0].tag" :title="item.konten[0].title" :subtitle="item.konten[0].subtitle"
+        <UiTitleSatu :tag="item.konten[1].tag" :title="item.konten[1].title" :subtitle="item.konten[1].subtitle"
           grid="mx-auto" />
         <div class="grid grid-cols-3 max-w-screen-md mx-auto gap-2">
           <UiTabs v-for="tahun in tahunList" :key="tahun" :label="tahun" :isActive="activeTahun === tahun"
             @click="activeTahun = tahun" />
         </div>
-      </div>
-      <div class="flex gap-2 bg-white p-6 rounded-lg overflow-x-scroll">
-        <div class="mt-4 grid gap-4">
-          <a v-for="item in filteredIsi" :key="item.to" :href="item.to" class="block underline text-blue-600">
-            {{ item.judul }} - {{ item.tahun }}
-          </a>
+        <div class="flex flex-wrap gap-2 justify-center bg-white p-6 rounded-lg overflow-x-scroll">
+          <div v-for="item in filteredIsi" :key="item.to" :href="item.to"
+            class="grid border w-1/3 shrink-0 h-48 p-6 hover:bg-primary hover:text-white content-between bg-base-100  group  hover:shadow-xl rounded-lg">
+            <div class="card-actions justify-end">
+
+              <button class="btn btn-circle bg-white scale-50 group-hover:-rotate-45 group-hover:scale-100">
+                <Icon name="solar:arrow-right-broken" class="w-16 h-8 duration-150 " />
+              </button>
+            </div>
+            <div class="flex items-center gap-4">
+              <Icon name="material-icon-theme:folder-pdf" class="size-14 saturate-50 group-hover:saturate-100 text-primary" />
+              <div class="text-left">
+                <p class="pf">{{ item.tahun }}</p>
+                <h5 class="text-left group-hover:text-white text-primary font-semibold leading-7 line-clamp-3">P{{
+                  item.judul }}</h5>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="#tahunan" class="grid grid-cols-1 md:grid-cols-6 gap-2 mt-2">
+    <section :id="item.konten[2].tag" class="grid grid-cols-1 md:grid-cols-6 gap-2 mt-2">
       <div class="col-span-2 bg-white p-6 rounded-lg grid content-between">
         <UiTitleSatu :tag="item.konten[2].tag" :title="item.konten[2].title" :subtitle="item.konten[0].subtitle"
           grid="" />
-        <div class="flex justify-end gap-2">
-          <button class="btn btn-circle btn-outline">
-            <Icon name="solar:arrow-left-line-duotone" class="w-8 h-8" />
-          </button>
-          <button class="btn btn-circle">
-            <Icon name="solar:arrow-right-line-duotone" class="w-8 h-8" />
-          </button>
-        </div>
+
       </div>
       <div class="flex col-span-4 gap-6 bg-white p-6 rounded-lg overflow-x-scroll">
         <div v-for="(group, groupKey) in groupedRUPS" :key="groupKey" class="w-64">
@@ -307,8 +313,8 @@ const groupedRUPS = computed(() => {
           <h5 class="mb-0 text-left font-semibold">{{ group.nama }}</h5>
           <ul class="space-y-3 mt-2">
             <li v-for="(item, i) in group.konten" :key="i" class="flex items-start">
-              <Icon name="solar:arrow-right-broken" class="w-5 h-5 mt-1 text-primary" />
-              <a :href="item.to" class="ml-3 underline text-blue-600 hover:text-blue-800">
+              <Icon name="solar:arrow-right-broken" class="w-5 h-5 text-primary" />
+              <a :href="item.to" class="ml-1 hover:font-bold hover:underline  text-blue-600 hover:text-blue-800">
                 {{ item.judul }}
               </a>
             </li>
@@ -316,6 +322,57 @@ const groupedRUPS = computed(() => {
         </div>
       </div>
 
+    </section>
+
+    <section :id="item.konten[3].tag" class="grid gap-2 mt-2">
+      <div class=" bg-white text-left pt-24 pb-0 p-6 rounded-lg flex justify-between items-center">
+        <UiTitleSatu :tag="item.konten[3].tag" :title="item.konten[3].title" :subtitle="item.konten[3].subtitle" />
+        <div class="flex gap-2">
+          <UiBtnPutih v-for="item in item.konten[3].button" :key="item" :text="item.judul" :textlink="item.to" />
+        </div>
+      </div>
+      <div class="grid grid-cols-5 gap-2">
+        <div class="bg-primary col-span-3 rounded-lg overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600"
+            class="h-full w-full object-cover object-center" />
+        </div>
+        <div class="col-span-2 grid grid-cols-2 gap-2">
+          <div class="p-6 col-span-2 bg-white rounded-lg">
+
+            <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600"
+              class="" />
+            <h4 class="my-4">Top 3 Daftar Pemegang saham</h4>
+            <div class="divide-y grid">
+              <div v-for="item in 3" :key="item" class="flex items-center justify-between py-2">
+                <div class="">
+                  <h5 class="">2,051,431,264</h5>
+                  <p>Bank Pan Indonesia</p>
+                </div>
+                <h4 class="">51,49%</h4>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <div v-for="item in item.konten[3].isi" :key="item"
+          class="grid border w-full shrink-0 h-48 p-6 hover:bg-primary hover:text-white content-between bg-base-100  group  hover:shadow-xl rounded-lg">
+          <Icon :name="item.icon" class="w-16 h-16 duration-150 " />
+          <div class="flex justify-between items-center">
+            <div>
+              <p>{{ item.tahun }}</p>
+              <h4 class="text-left group-hover:text-white text-primary font-semibold leading-7 line-clamp-3">{{
+                item.judul
+                }}</h4>
+            </div>
+            <button class="btn btn-circle bg-white scale-50 group-hover:-rotate-45 group-hover:scale-100">
+              <Icon name="solar:arrow-right-broken" class="w-16 h-8 duration-150 " />
+            </button>
+          </div>
+
+        </div>
+      </div>
     </section>
   </div>
 </template>
