@@ -12,11 +12,9 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'nuxt-headlessui',
     'nuxt-gtag',
+    '@nuxt/image',
+    '@nuxt/icon',
   ],
-
-  gtag: {
-    id: 'G-', 
-  },
 
   srcDir: './src',
 

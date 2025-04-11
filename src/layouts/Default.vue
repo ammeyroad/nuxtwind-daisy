@@ -1,29 +1,9 @@
 <template>
-  <div :data-theme="theme">
-    <div class="navbar fixed bg-base-100 z-40 shadow-sm">
-      <div class="navbar-start">
-        <a class="btn btn-ghost md:text-xl">Nuxtwind Daisy</a>
-      </div>
-      <div class="navbar-center hidden lg:flex">
-        <!-- TODO: You can add menu here -->
-      </div>
-      <div class="navbar-end">
-        <select v-model="theme" class="select select-primary md:w-full md:max-w-xs">
-          <option disabled selected>Select Theme</option>
-          <option v-for="theme in themes" :value="theme" :key="theme">
-            <span class="uppercase">{{ theme }}</span>
-          </option>
-        </select>
-      </div>
+  <div :data-theme="theme" class=" bg-blue-50">
+    <LayoutNavbar />
+    <div class=" max-w-screen-xl mx-auto">
+      <slot />
     </div>
-    <slot />
-    <button class="btn">Button</button>
-    <button class="btn btn-neutral">Neutral</button>
-    <button class="btn btn-primary">Primary</button>
-    <button class="btn btn-secondary">Secondary</button>
-    <button class="btn btn-accent">Accent</button>
-    <button class="btn btn-ghost">Ghost</button>
-    <button class="btn btn-link">Link</button>
     <footer class="footer footer-center p-10 bg-base-50">
       <div>
         <h1 class="text-2xl md:text-3xl font-bold">Nuxtwind Daisy</h1>

@@ -4,47 +4,32 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#843bd7',
+        primary: '#007AFF', // Merah
+        secondary: '#FF2323', // Biru
+        accent: 'FFC700', // Kuning
+        neutral: '#111111', // Hitam
+        base: '#FFFFFF', // Putih
+        hijau: '#05ABBA', // Kuning
       },
       fontFamily: {
-        primary: ['Inter'],
+        heading: ['"Barlow Condensed"', 'sans-serif'],
+        body: ['"Open Sans"', 'sans-serif'],
       },
     },
   },
   daisyui: {
-    // base: false,
     themes: [
-      'light',
-      'dark',
-      'cupcake',
-      'bumblebee',
-      'emerald',
-      'corporate',
-      'synthwave',
-      'retro',
-      'cyberpunk',
-      'valentine',
-      'halloween',
-      'garden',
-      'forest',
-      'aqua',
-      'lofi',
-      'pastel',
-      'fantasy',
-      'wireframe',
-      'black',
-      'luxury',
-      'dracula',
-      'cmyk',
-      'autumn',
-      'business',
-      'acid',
-      'lemonade',
-      'night',
-      'coffee',
-      'winter',
+      {
+        mytheme: {
+          primary: '#007AFF',
+          secondary: '#FF2323',
+          accent: 'FFC700',
+          neutral: '#111111',
+          hijau: '#05ABBA',
+          'base-100': '#FFFFFF',
+        },
+      },
     ],
-
   },
   plugins: [
     '@tailwindcss/forms',
