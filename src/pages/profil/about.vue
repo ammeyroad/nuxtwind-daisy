@@ -25,7 +25,7 @@ const titles = ref([
     subtitle: 'Beragam pilihan pembiayaan yang fleksibel sesuai kebutuhan Anda.',
     grid: 'grid md:grid-cols-2 gap-6',
   },
-])
+]);
 
 const section = ref([
   {

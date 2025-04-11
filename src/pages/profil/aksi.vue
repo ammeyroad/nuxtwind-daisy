@@ -3,7 +3,7 @@
 const item = {
   halaman: 'Profil Perusahaan',
   to: '/profil',
-  title: 'Aksi berkelanjutan kami',
+  title: 'Tata Kelola Clipan Finance',
   description: 'Ingin mengetahui tentang Clipan? Ini adalah halaman yang menampilkan informasi tentang Clipan. lengap dari sejarah dan pengembangan Clipan.',
   gambar: 'https://clipan-v3.netlify.app/slider-1.png',
   konten: [
@@ -15,26 +15,37 @@ const item = {
       gambar: '/about',
       isi: [
         {
-          judul: 'judul tahun keduia',
-          to: 'https://clipan-v3.netlify.app/slider-1.png',
+          judul: 'Credit Marketing Officer',
+          divisi: 'marketing',
+          to: '#',
+          subjudul: 'deskripsi singkat kerjaan',
+          pengalaman: '1-2 Tahun',
+          lokasi: 'Kantor pusat',
+          status: 'Kontrak',
+          deskripsi: 'Were seeking a talented React Native Front End Developer to join our growing team and contribute to the development of cutting- edge mobile applications.Google is an equal - opportunity employer.We encourage candidates from all backgrounds to apply.',
         },
         {
-          judul: 'judul tahun keduia',
-          to: 'https://clipan-v3.netlify.app/slider-1.png',
+          judul: 'Credit Marketing Officer',
+          divisi: 'Collection',
+          to: '#',
+          subjudul: 'deskripsi singkat kerjaan',
+          pengalaman: '1-2 Tahun',
+          lokasi: 'Kantor pusat',
+          status: 'Kontrak',
+          deskripsi: 'Were seeking a talented React Native Front End Developer to join our growing team and contribute to the development of cutting- edge mobile applications.Google is an equal - opportunity employer.We encourage candidates from all backgrounds to apply.',
         },
       ],
     },
     {
-      tag: 'Profesi Penunjang',
+      tag: 'Keberlanjutan',
       tagto: '#keuangan',
-      title: 'Lihat Profesi Penunjang Clipan',
+      title: 'Dampak Sosial Clipan',
       subtitle: 'Laporan tahunan yang perusahaan Clipan',
       gambar: '/about',
       isi: [
         {
           judul: 'Deloit dkk',
-          deskripsi: 'alamat dan detail',
-          to: 'https://clipan-v3.netlify.app/slider-1.png',
+          gambar: 'https://clipan-v3.netlify.app/slider-1.png',
         },
         {
           judul: 'Deloit dkk',
@@ -44,43 +55,27 @@ const item = {
       ],
     },
     {
-      tag: 'Anggaran Dasar',
+      tag: 'Berita Resmi',
       tagto: '#rups',
-      title: 'Anggaran Dasar Clipan',
+      title: 'Siaran Resmi dan Literasi',
       subtitle: 'Informasi RUPS tahunan yang perusahaan Clipan',
       isi: [
         {
-          judul: 'Anggaran Dasar',
-          to: 'https://clipan-v3.netlify.app/slider-1.png',
+          judul: 'Siaran Resmi',
+          to: 'resmi',
         },
         {
-          judul: 'judul tahun keduia',
-          to: 'https://clipan-v3.netlify.app/slider-1.png',
-        },
-        {
-          judul: 'judul tahun keduia',
-          to: 'https://clipan-v3.netlify.app/slider-1.png',
+          judul: 'literasi',
+          to: 'literasi',
         },
       ],
     },
     {
-      tag: 'Whitsleblowing',
+      tag: 'Aktifitas',
       tagto: '#prospektus',
-      title: 'ini Prospektus RUPS Clipan',
+      title: 'kegiatan',
       subtitle: 'Informasi RUPS tahunan yang perusahaan Clipan',
-      isi: [
-        {
-          judul: 'Email',
-          deskripsi: 'cinta@clipan.co.id',
-          to: 'mailto:cinta@clipan.co.id',
-          icon: 'solar:airbuds-case-bold-duotone',
-        },
-        {
-          judul: 'Email',
-          deskripsi: 'cinta@clipan.co.id',
-          to: 'mailto:cinta@clipan.co.id',
-          icon: 'solar:airbuds-case-bold-duotone',
-        },
+      isi: ['https://clipan-v3.netlify.app/slider-1.png', 'https://clipan-v3.netlify.app/slider-1.png', 'https://clipan-v3.netlify.app/slider-1.png', 'https://clipan-v3.netlify.app/slider-1.png', 'https://clipan-v3.netlify.app/slider-1.png',
       ],
     },
   ],
